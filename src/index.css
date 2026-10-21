@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", Georgia, Cambria, serif;
+  --font-sans: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-telugu: "Noto Sans Telugu", "Manrope", sans-serif;
+
+  --color-forest: #234735;
+  --color-forest-deep: #18382B;
+  --color-forest-dark: #11281E;
+  --color-ivory: #F5F0E5;
+  --color-ivory-light: #FAF7F0;
+  --color-cream: #FBF9F3;
+  --color-sage: #C9D3B8;
+  --color-sage-light: #E7EDDC;
+  --color-sage-tint: #F0F4E8;
+  --color-olive: #858F65;
+  --color-terracotta: #C77B52;
+  --color-terracotta-dark: #B06740;
+  --color-charcoal: #252A24;
+  --color-muted: #77786E;
+  --color-border-subtle: rgba(35, 71, 53, 0.12);
+  --color-border-dark: rgba(245, 240, 229, 0.15);
+}
+
+@layer base {
+  body {
+    background-color: var(--color-ivory);
+    color: var(--color-charcoal);
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-editorial {
+    font-family: var(--font-serif);
+  }
+}
+
+/* Subtle botanical sway animations */
+@keyframes botanical-sway {
+  0%, 100% {
+    transform: rotate(0deg) translateY(0);
+  }
+  50% {
+    transform: rotate(2.5deg) translateY(-3px);
+  }
+}
+
+@keyframes botanical-float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(-1.5deg);
+  }
+}
+
+@keyframes stroke-draw {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-sway {
+  animation: botanical-sway 7s ease-in-out infinite;
+}
+
+.animate-sway-delayed {
+  animation: botanical-sway 9s ease-in-out 2s infinite;
+}
+
+.animate-float-slow {
+  animation: botanical-float 11s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

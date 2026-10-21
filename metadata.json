@@ -1,0 +1,6 @@
+{
+  "name": "SAGE Farm Cafe (సేజ్ ఫార్మ్ కేఫ్)",
+  "description": "Artisanal farm-to-table cafe and conscious food market in Jubilee Hills, Hyderabad. Mindful dining, seasonal plates, specialty coffee, and botanical sanctuary.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
